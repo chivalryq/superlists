@@ -12,7 +12,8 @@ class NewVisitorTest(unittest.TestCase):
 
     def test_can_start_a_list_and_retrieve_it_later(self):
         self.browser.get('http://localhost:8000')
-        assert 'install' in self.browser.title, "the browser's title is " + self.browser.title
+        self.assertIn('To-Do',self.browser.title)
+        self.fail("Test is finish")
 
 
 if __name__ == '__main__':
